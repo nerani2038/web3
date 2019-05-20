@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>객체 만들고 가져오기</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <h2>create</h2>
+    <script>
+        var number = {
+            "first":"one",
+            "second": "two"
+        };
+        document.write("1 : "+number.first+"<br>");
+        document.write("2 : " + number.second + "<br>");
+        number.third = "three";
+        document.write("3 : " + number.third + "<br>");
+        number["data forst"] = "four";
+        document.write("4 : "+ number["data forst"]+"<br>");
+
+    </script>
+    <h2>Iterate</h2>
+    <script>
+        for(var key in number){
+            document.write(key + ' : ' +number[key]+"<br>");
+        }
+        document.write('<hr>');
+        for(var key in number){
+            document.write(key+'<br>');
+        } 
+        document.write('<hr>');
+            for (var key in number) {
+                document.write(number[key] + '<br>');
+            }
+    </script>
+
+    <h2>property & method</h2>
+    <script>
+        number.showAll = function(){
+                 for (var key in this) {
+                document.write(key + ' : ' + this[key] + "<br>");
+            }   
+        }
+        number.showAll();
+        // var showAll = function(){
+
+        // }
+
+        // function showAll(){
+
+        // }
+    </script>
+</body>
+</html>
